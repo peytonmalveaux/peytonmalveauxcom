@@ -1,0 +1,178 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>PKI Lab Implementation - Left Sidebar</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			body {
+				background-color: #85C1E9; /* Updated color to a light turquoise */
+				color: #333;
+				font-family: "Arial", sans-serif;
+			}
+			header {
+				background-color: #004d99;
+				color: #fff;
+				padding: 20px 0;
+				text-align: center;
+			}
+			header h1 {
+				margin: 0;
+				font-size: 2.5em;
+			}
+			.sidebar section {
+				background-color: #d1f2eb;
+				border-radius: 10px;
+				padding: 15px;
+				margin-bottom: 20px;
+			}
+			.content section {
+				background-color: #a9dfbf;
+				border-radius: 10px;
+				padding: 20px;
+				margin-bottom: 20px;
+			}
+			footer {
+				background-color: #00264d;
+				color: #fff;
+				padding: 20px;
+				text-align: center;
+			}
+			footer a {
+				color: #66b2ff;
+				text-decoration: none;
+			}
+			footer a:hover {
+				text-decoration: underline;
+			}
+		</style>
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="left-sidebar is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<header id="header">
+					<h1 id="logo"><a href="index.html">Peyton Malveaux <span>PKI Lab</span></a></h1>
+					<nav id="nav">
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="#contact">Contact</a></li>
+						</ul>
+					</nav>
+				</header>
+
+			<!-- Main -->
+				<article id="main">
+
+					<header class="special container">
+						<span class="icon solid fa-key"></span>
+						<h2>Public Key Infrastructure (PKI) Lab Implementation</h2>
+						<p>This lab explored the implementation of a Public Key Infrastructure to enhance secure communication and enforce authentication standards across systems.</p>
+					</header>
+
+					<section class="wrapper style4 container">
+
+						<div class="row gtr-150">
+							<div class="col-4 col-12-narrower">
+
+								<!-- Sidebar -->
+									<div class="sidebar">
+										<section>
+											<header>
+												<h3>Lab Purpose</h3>
+											</header>
+											<p>The primary goal of this lab was to understand and implement a Public Key Infrastructure (PKI) using Windows Server. By setting up a Root CA and a Subordinate CA, we created a trusted infrastructure for issuing certificates to users and servers, enabling encrypted communication channels.</p>
+										</section>
+									</div>
+
+							</div>
+							<div class="col-8 col-12-narrower imp-narrower">
+
+								<!-- Content -->
+									<div class="content">
+										<section>
+											<header>
+												<h3>Steps Taken to Implement the PKI</h3>
+											</header>
+											<p>The lab involved configuring various components of a PKI setup, including Root and Subordinate Certification Authorities, issuing certificates, and testing secure communications. Below are the key steps we followed:</p>
+											<ol>
+												<li><strong>Configuring the Root CA:</strong> The Root Certification Authority was set up with a self-signed certificate to establish trust within the system.</li>
+												<li><strong>Setting Up the Subordinate CA:</strong> The Subordinate CA was issued a certificate from the Root CA. It is responsible for handling certificate requests and issuing certificates to users and servers.</li>
+												<li><strong>Generating and Issuing Certificates:</strong> Certificates were issued for various use cases, including enabling HTTPS on web servers and secure email communication using S/MIME.</li>
+												<li><strong>Testing Secure Communications:</strong> The issued certificates were used to verify encrypted communications between clients and servers.</li>
+											</ol>
+										</section>
+
+										<section>
+											<header>
+												<h3>Key Findings and Results</h3>
+											</header>
+											<ul>
+												<li>Proper configuration of the Root CA and Subordinate CA is essential for maintaining trust within the system.</li>
+												<li>Certificates play a vital role in enabling secure communication and enforcing authentication policies.</li>
+												<li>The use of encrypted communication channels ensures data confidentiality and protects against man-in-the-middle attacks.</li>
+												<li>Testing on different platforms is necessary to identify compatibility issues and ensure seamless integration.</li>
+											</ul>
+										</section>
+
+										<section>
+											<header>
+												<h3>Lab Screenshots</h3>
+											</header>
+											<p>Below are screenshots highlighting the key steps taken during the PKI lab implementation:</p>
+											<div class="row">
+												<div class="col-4 col-12-mobile">
+													<a href="images/CSR.png" class="image featured">
+														<img src="images/CSR.png" alt="Generating a Certificate Signing Request (CSR)" />
+													</a>
+													<p>Generating a Certificate Signing Request (CSR)</p>
+												</div>
+												<div class="col-4 col-12-mobile">
+													<a href="images/CSR2.png" class="image featured">
+														<img src="images/CSR2.png" alt="Installing the CA Certificate in the Browser" />
+													</a>
+													<p>Installing the CA Certificate in the Browser</p>
+												</div>
+												<div class="col-4 col-12-mobile">
+													<a href="images/CSR3.png" class="image featured">
+														<img src="images/CSR3.png" alt="Result of Successful HTTPS Configuration" />
+													</a>
+													<p>Result of Successful HTTPS Configuration</p>
+												</div>
+											</div>
+										</section>
+									</div>
+
+							</div>
+						</div>
+					</section>
+
+				</article>
+
+			<!-- Footer -->
+				<footer id="footer">
+					<ul class="icons">
+						<li><a href="https://www.linkedin.com/in/peyton-malveaux" class="icon brands circle fa-linkedin"><span class="label">LinkedIn</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Peyton Malveaux</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollgress.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

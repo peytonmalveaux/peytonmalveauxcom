@@ -1,0 +1,160 @@
+<!DOCTYPE HTML>
+<!--
+    PKI Lab Implementation - Detailed Page
+    Based on Twenty by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+    <head>
+        <title>PKI Lab Implementation</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    </head>
+    <body class="is-preload">
+        <div id="page-wrapper">
+
+            <!-- Header -->
+            <header id="header">
+                <h1 id="logo"><a href="index.html">Peyton Malveaux <span>PKI Lab</span></a></h1>
+                <nav id="nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="docs/Peyton Malveaux - CHK.pdf">Resume</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <!-- Main -->
+            <article id="main">
+                <header class="special container">
+                    <h2>PKI Lab Implementation</h2>
+                    <p>Exploring the intricacies of implementing a Public Key Infrastructure for secure communication and authentication.</p>
+                </header>
+
+                <!-- Content Section -->
+                <section class="wrapper style2 container">
+                    <!-- Setup Overview -->
+                    <div class="row gtr-50">
+                        <div class="col-12">
+                            <h3>Overview of the PKI Lab</h3>
+                            <p>Our lab focused on setting up a Public Key Infrastructure (PKI) to secure communications and enforce authentication standards. We used Windows Server to configure Certification Authorities (CAs) and issued certificates to ensure confidentiality, integrity, and authentication.</p>
+                            <ul>
+                                <li>Configured a Root Certification Authority (CA) and a Subordinate CA for efficient certificate management.</li>
+                                <li>Issued certificates for users and servers to enable HTTPS and secure email communication.</li>
+                                <li>Tested encrypted communication channels using issued certificates.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Detailed Steps -->
+                    <div class="row gtr-50">
+                        <div class="col-12">
+                            <h3>Steps to Set Up PKI</h3>
+                            <ol>
+                                <li><strong>Set Up the Root CA:</strong> Configured the root CA with a self-signed certificate to establish trust within the infrastructure.</li>
+                                <li><strong>Deploy the Subordinate CA:</strong> Issued a certificate for the subordinate CA from the root CA and configured it to handle certificate requests.</li>
+                                <li><strong>Issue Certificates:</strong>
+                                    <ul>
+                                        <li>Generated certificates for web servers to enable HTTPS.</li>
+                                        <li>Issued certificates for users to enable secure email communication via S/MIME.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Test Secure Communications:</strong> Verified encrypted communication between clients and servers using the issued certificates.</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <!-- Challenges and Solutions -->
+                    <div class="row gtr-50">
+                        <div class="col-12">
+                            <h3>Challenges and Solutions</h3>
+                            <p>During the implementation, we encountered challenges such as certificate revocation list (CRL) configurations and ensuring interoperability with various client systems. These were addressed by:</p>
+                            <ul>
+                                <li>Properly configuring CRLs and ensuring they were accessible to all clients.</li>
+                                <li>Testing certificate usage on multiple platforms to identify and resolve compatibility issues.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Screenshots -->
+                    <div class="row gtr-50">
+                        <div class="col-12">
+                            <h3>Screenshots</h3>
+                            <p>Below are screenshots showcasing key steps and results from the lab:</p>
+                            <div class="row">
+                                <div class="col-4 col-12-mobile">
+                                    <a href="images/CSR.png" class="image featured">
+                                        <img src="images/CSR.png" alt="Generate a Certificate Signing Request (CSR)" />
+                                    </a>
+                                    <p>Generate a Certificate Signing Request (CSR)</p>
+                                </div>
+                                <div class="col-4 col-12-mobile">
+                                    <a href="images/CSR2.png" class="image featured">
+                                        <img src="images/CSR2.png" alt="Getting the browser to accept our CA certificate." />
+                                    </a>
+                                    <p>Getting the browser to accept our CA certificate.</p>
+                                </div>
+                                <div class="col-4 col-12-mobile">
+                                    <a href="images/CSR3.png" class="image featured">
+                                        <img src="images/CSR3.png" alt="Setting up the malicious website" />
+                                    </a>
+                                    <p>Setting up the malicious website</p>
+                                </div>
+                                <div class="col-4 col-12-mobile">
+                                    <a href="images/CSR4.png" class="image featured">
+                                        <img src="images/CSR4.png" alt=" Becoming the man in the middle" />
+                                    </a>
+                                    <p>Becoming the man in the middle</p>
+                                </div>
+                                <div class="col-4 col-12-mobile">
+                                    <a href="images/CSR5.png" class="image featured">
+                                        <img src="images/CSR5.png" alt="ERROR: Cannot Access Youtube With SeedLab Certificate" />
+                                    </a>
+                                    <p>ERROR: Cannot Access Youtube With SeedLab Certificate</p>
+                                </div>
+                                <div class="col-4 col-12-mobile">
+                                    <a href="images/CSR6.png" class="image featured">
+                                        <img src="images/CSR6.png" alt="creating a proper certificate for youtube.com" />
+                                    </a>
+                                    <p>Creating a proper certificate for Youtube.com</p>
+                                </div>
+                                <div class="col-4 col-12-mobile">
+                                    <a href="images/CSR7.png" class="image featured">
+                                        <img src="images/CSR7.png" alt="Result of Accessing Youtube.com" />
+                                    </a>
+                                    <p>Result of Accessing Youtube.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </article>
+
+            <!-- Footer -->
+            <footer id="footer">
+                <ul class="icons">
+                    <li><a href="#" class="icon brands circle fa-twitter"><span class="label">Twitter</span></a></li>
+                    <li><a href="#" class="icon brands circle fa-facebook-f"><span class="label">Facebook</span></a></li>
+                    <li><a href="#" class="icon brands circle fa-github"><span class="label">GitHub</span></a></li>
+                </ul>
+                <ul class="copyright">
+                    <li>&copy; Peyton Malveaux</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                </ul>
+            </footer>
+        </div>
+
+        <!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.dropotron.min.js"></script>
+        <script src="assets/js/jquery.scrolly.min.js"></script>
+        <script src="assets/js/jquery.scrollex.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>

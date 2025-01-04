@@ -1,0 +1,134 @@
+<!DOCTYPE HTML>
+<!--
+    Integrated Technical Page
+    Based on Twenty by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+    <head>
+        <title>Technical Clarity - Azure Logic Apps and Runbook</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    </head>
+    <body class="is-preload">
+        <div id="page-wrapper">
+
+            <!-- Header -->
+            <header id="header">
+                <h1 id="logo"><a href="index.html">Peyton Malveaux <span>Technical Overview</span></a></h1>
+                <nav id="nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li class="current"><a href="docs/Peyton Malveaux - CHK.pdf" target="_blank">RESUME</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <!-- Main -->
+            <article id="main">
+                <header class="special container">
+                    <h2>Technical Clarity: Detailing Azure Logic Apps and Runbook Workflows</h2>
+                </header>
+
+                <!-- Content Section -->
+                <section class="wrapper style2 container">
+                    <div class="row gtr-50">
+                        <div class="col-12">
+                            <h3>How Azure Logic Apps and Runbook Are Used</h3>
+                            <p><strong>Azure Logic Apps</strong>: This workflow is used to automate user provisioning tasks and lifecycle management. Specifically, the Logic App named <code>LWF-NewUser-CustomExtension-TAP-DV</code> orchestrates tasks related to onboarding new employees, such as:</p>
+                            <ul>
+                                <li>Generating temporary access passwords (TAPs).</li>
+                                <li>Assigning appropriate roles and permissions based on organizational requirements.</li>
+                                <li>Sending automated emails to new users and diagnosing teams for seamless communication.</li>
+                                <li>Handling API calls to Microsoft Graph for user updates.</li>
+                            </ul>
+                            <p><strong>Azure Runbook</strong>: This serves as the backend automation script executor. Runbooks are used for repetitive, long-running tasks such as:</p>
+                            <ul>
+                                <li>Cleaning up orphaned user accounts or expired sessions.</li>
+                                <li>Rotating credentials for security compliance.</li>
+                                <li>Ensuring synchronization between on-premises and cloud environments.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Challenges Addressed -->
+                    <div class="row gtr-50">
+                        <div class="col-12">
+                            <h3>Challenges Addressed</h3>
+                            <ul>
+                                <li><strong>Edge Case Handling:</strong> Implemented conditional checks and retries within the Logic App to handle incomplete data and ensure accurate processing.</li>
+                                <li><strong>Compliance Requirements:</strong> Designed workflows to enforce password policies, ensuring passwords are changed upon the first login.</li>
+                                <li><strong>Error Notifications:</strong> Integrated email alerts for diagnosing teams, providing detailed logs and actionable insights when an error occurs.</li>
+                                <li><strong>Delay in Data Propagation:</strong> Added waiting intervals and sequential task execution in Logic Apps to mitigate propagation delays.</li>
+                                <li><strong>High Volume of Jobs:</strong> Due to a significant number of users onboarding simultaneously, the system encountered issues with suspended jobs caused by the overload. To address this, we implemented load balancing by integrating additional Azure Arc Servers. This expansion improved scalability and ensured jobs were processed without interruption.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                    <!-- Example Workflow -->
+                    <div class="row gtr-50">
+                        <div class="col-12">
+                            <h3>Example Workflow: Onboarding New Users</h3>
+                            <ol>
+                                <li><strong>Trigger:</strong> A manual HTTP request starts the workflow.</li>
+                                <li><strong>Actions:</strong>
+                                    <ul>
+                                        <li>Parse incoming data for new user details.</li>
+                                        <li>Check if the GUID exists in the Active Directory profile.</li>
+                                        <li>Update the password and enforce password reset on the next login.</li>
+                                        <li>Notify the new employee and the diagnosing team via email.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>API Usage:</strong> PATCH requests to Microsoft Graph API for user updates, calls to Azure AD API for assigning roles and permissions.</li>
+                                <li><strong>Final Notification:</strong> Successful emails are sent with detailed instructions to the user, including a temporary password and links to login resources.</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <!-- Impact and Proficiency -->
+                    <div class="row gtr-50">
+                        <div class="col-12">
+                            <h3>Takeaways for Employers</h3>
+                            <p><strong>Impact:</strong></p>
+                            <ul>
+                                <li>Reduced manual efforts for IT administrators by 40% through automation.</li>
+                                <li>Ensured 100% compliance with organizational security and governance policies.</li>
+                            </ul>
+                            <p><strong>Technical Proficiency:</strong></p>
+                            <ul>
+                                <li>Deep understanding of Azure Logic Apps, Runbook automation, and Microsoft Graph API.</li>
+                                <li>Capability to design scalable, secure workflows that handle edge cases and adapt to organizational needs.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </article>
+
+            <!-- Footer -->
+            <footer id="footer">
+                <ul class="icons">
+                    <li><a href="https://www.linkedin.com/in/peyton-malveaux-778472198/" class="icon brands circle fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                </ul>
+                <ul class="copyright">
+                    <li>&copy; Peyton Malveaux</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                </ul>
+            </footer>
+
+        </div>
+
+        <!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.dropotron.min.js"></script>
+        <script src="assets/js/jquery.scrolly.min.js"></script>
+        <script src="assets/js/jquery.scrollex.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<!--
+    Hadoop Cluster Page
+    Based on Twenty by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+    <head>
+        <title>Hadoop Cluster Setup</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    </head>
+    <body class="is-preload">
+        <div id="page-wrapper">
+
+            <!-- Header -->
+            <header id="header">
+                <h1 id="logo"><a href="index.html">Peyton Malveaux <span>Hadoop Cluster</span></a></h1>
+                <nav id="nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li class="current"><a href="docs/Peyton Malveaux - CHK.pdf" target="_blank">RESUME</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <!-- Main -->
+            <article id="main">
+                <header class="special container">
+                    <h2>Setting Up a Hadoop Cluster on Chameleon Cloud</h2>
+                </header>
+
+                <!-- Content Section -->
+                <section class="wrapper style2 container">
+                    <div class="row gtr-50">
+                        <div class="col-12">
+                            <h3>Overview</h3>
+                            <p>As a team of four, we successfully set up a Hadoop cluster on the Chameleon Cloud platform. This was done to process large datasets efficiently using Hadoop's MapReduce framework. Below are the key steps and configurations we implemented:</p>
+                        </div>
+                    </div>
+
+                    <!-- Configuration Steps -->
+                    <div class="row gtr-50">
+                        <div class="col-12">
+                            <h3>Key Steps</h3>
+                            <ol>
+                                <li>Set up medium-sized virtual machines running Ubuntu, configured with RSA key pairs for secure SSH access.</li>
+                                <li>Installed and configured Hadoop software:
+                                    <ul>
+                                        <li>Set up HDFS replication factor to ensure fault tolerance.</li>
+                                        <li>Configured the Master node (NameNode, JobTracker) and Worker nodes (DataNode, TaskTracker).</li>
+                                    </ul>
+                                </li>
+                                <li>Created a VM snapshot to replicate configurations across the cluster.</li>
+                                <li>Downloaded and distributed NYC Crime Data files, replicating them across nodes.</li>
+                                <li>Implemented MapReduce programs to process data:
+                                    <ul>
+                                        <li><strong>Mapper:</strong> Broke input data into key-value pairs for parallel processing.</li>
+                                        <li><strong>Reducer:</strong> Aggregated and summarized intermediate outputs.</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <!-- Screenshots Section -->
+                    <div class="row gtr-50">
+                        <div class="col-12">
+                            <h3>Screenshots</h3>
+                            <p>Below are screenshots demonstrating our setup and results:</p>
+                            <div class="row">
+                                <div class="col-4 col-12-narrower">
+                                    <a href="images/hadoop-config.png" class="image featured">
+                                        <img src="images/hadoop-config.png" alt="Hadoop Configuration on Chameleon Cloud" />
+                                    </a>
+                                    <p>Hadoop Configuration on Chameleon Cloud</p>
+                                </div>
+                                <div class="col-4 col-12-narrower">
+                                    <a href="images/map-reduce-code.png" class="image featured">
+                                        <img src="images/map-reduce-code.png" alt="Hadoop Configuration on Chameleon Cloud" />
+                                    </a>
+                                    <p>Map-Reduce Python Code Snippet</p>
+                                </div>
+                                <div class="col-4 col-12-narrower">
+                                    <a href="images/output.png" class="image featured">
+                                        <img src="images/output.png" alt="Hadoop Configuration on Chameleon Cloud" />
+                                    </a>
+                                    <p>Output</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </article>
+
+            <!-- Footer -->
+            <footer id="footer">
+                <ul class="icons">
+                    <li><a href="https://www.linkedin.com/in/peyton-malveaux-778472198/" class="icon brands circle fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                </ul>
+                <ul class="copyright">
+                    <li>&copy; Peyton Malveaux</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                </ul>
+            </footer>
+        </div>
+
+        <!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.dropotron.min.js"></script>
+        <script src="assets/js/jquery.scrolly.min.js"></script>
+        <script src="assets/js/jquery.scrollex.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>

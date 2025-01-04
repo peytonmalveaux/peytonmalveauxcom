@@ -1,0 +1,156 @@
+<!DOCTYPE HTML>
+<!--
+    CUDA Parallel Programming Experiment - Detailed Page
+    Based on Twenty by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+    <head>
+        <title>CUDA Parallel Programming Experiment</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    </head>
+    <body class="is-preload">
+        <div id="page-wrapper">
+
+            <!-- Header -->
+            <header id="header">
+                <h1 id="logo"><a href="index.html">Peyton Malveaux <span>CUDA Experiment</span></a></h1>
+                <nav id="nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li class="current"><a href="docs/Peyton Malveaux - CHK.pdf" target="_blank">RESUME</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <!-- Main -->
+            <article id="main">
+                <header class="special container">
+                    <h2>CUDA Parallel Programming Experiment</h2>
+                    <p>Exploring the power of GPU-based parallel processing to enhance computational efficiency and performance.</p>
+                    <p><strong>NOTE:</strong> For Source Code and Official Documentation please navigate to the Google Drive folder: <a href="https://drive.google.com/drive/folders/1ls7mCcma4n3hHNvNN9E3aR4QFXDwa458?usp=drive_link" target="_blank">HERE</a></p>
+                </header>
+
+                <!-- Project Goals -->
+                <section class="wrapper style2 container">
+                    <div class="row gtr-50">
+                        <div class="col-12">
+                            <h3>Project Goals</h3>
+                            <p>The objective of this project was to understand the fundamentals of parallel programming using NVIDIA's CUDA platform. The goal was to optimize compute-intensive tasks by parallelizing code that would typically run sequentially on a CPU. The experiment aimed to compare performance improvements between the CPU and GPU implementations of various computational tasks, such as matrix multiplication and vector addition.</p>
+                        </div>
+                    </div>
+
+                    <!-- Project Overview -->
+                    <div class="row gtr-50">
+                        <div class="col-12">
+                            <h3>Overview of the CUDA Experiment</h3>
+                            <p>The CUDA experiment involved converting traditionally sequential algorithms into parallelized versions to harness the power of a GPU. We utilized CUDA's programming model to write kernels that execute on the GPU. The project focused on implementing tasks like vector addition and matrix multiplication to demonstrate the speedup gained from parallel execution.</p>
+                            <p>The key components of the experiment included:</p>
+                            <ul>
+                                <li>Configuring the development environment with CUDA-capable GPUs.</li>
+                                <li>Understanding CUDA memory hierarchy, including global, shared, and local memory.</li>
+                                <li>Implementing parallel kernels to execute tasks across multiple GPU threads.</li>
+                                <li>Comparing performance metrics between CPU and GPU executions.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Steps and Code Snippets -->
+                    <div class="row gtr-50">
+                        <div class="col-12">
+                            <h3>Implementation Steps</h3>
+                            <p>The following steps were taken to complete the CUDA programming experiment:</p>
+                            <ol>
+                                <li><strong>Setup:</strong> Installed the CUDA toolkit and configured the development environment with a CUDA-capable GPU.</li>
+                                <li><strong>Kernel Development:</strong> Developed CUDA kernels for parallelized computation tasks.</li>
+                                <li><strong>Execution:</strong> Executed the parallelized kernels on the GPU and measured performance improvements.</li>
+                                <li><strong>Performance Analysis:</strong> Analyzed the results to compare the performance of GPU-based parallel processing versus CPU-based sequential execution.</li>
+                            </ol>
+
+                            <h4>Example Code Snippet</h4>
+                            <pre><code>
+__global__ void add(int *a, int *b, int *c) {
+    int index = threadIdx.x;
+    c[index] = a[index] + b[index];
+}
+
+int main() {
+    int a[N], b[N], c[N];
+    // Memory allocation and data initialization...
+    add<<<1, N>>>(a, b, c);
+    // Results processing...
+}
+                            </code></pre>
+
+                            <p>This example demonstrates a simple CUDA kernel for vector addition, where each thread performs the addition of two elements from input arrays <code>a</code> and <code>b</code> and stores the result in <code>c</code>.</p>
+                        </div>
+                    </div>
+
+                    <!-- Performance Analysis -->
+                    <div class="row gtr-50">
+                        <div class="col-12">
+                            <h3>Performance Analysis and Observations</h3>
+                            <p>The parallelized CUDA implementation showed significant performance improvements compared to the sequential CPU version. By utilizing thousands of GPU cores to perform computations simultaneously, tasks that previously took minutes on the CPU were completed in mere seconds using the GPU.</p>
+                            <p>For example:</p>
+                            <ul>
+                                <li><strong>Vector Addition:</strong> Achieved a speedup of approximately 10x compared to the CPU implementation.</li>
+                                <li><strong>Matrix Multiplication:</strong> Observed a performance improvement of around 15x when running on the GPU.</li>
+                                <li><strong>Resource Utilization:</strong> The GPU utilization was close to 80%, indicating efficient use of parallel processing resources.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Screenshot -->
+                    <div class="row gtr-50">
+                        <div class="col-12">
+                            <h3>Screenshot</h3>
+                            <div class="row">
+                                <div class="col-12">
+                                    <a href="images/Cuda-Speedup.png" class="image featured">
+                                        <img src="images/Cuda-Speedup.png" alt="Performance Comparison Chart" />
+                                    </a>
+                                    <p>Performance Comparison Chart</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Documentation Button -->
+                    <div class="row gtr-50">
+                        <div class="col-12">
+                            <h3>Official Documentation</h3>
+                            <p>Click the button below to access the official project documentation in PDF format:</p>
+                            <a href="docs/CUDA Programming Examples for Efficiency.pdf" class="button" target="_blank">View Documentation</a>
+                        </div>
+                    </div>
+
+                </section>
+            </article>
+
+            <!-- Footer -->
+            <footer id="footer">
+                <ul class="icons">
+                    <li><a href="https://www.linkedin.com/in/peyton-malveaux-778472198/" class="icon brands circle fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                </ul>
+                <ul class="copyright">
+                    <li>&copy; Peyton Malveaux</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                </ul>
+            </footer>
+        </div>
+
+        <!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.dropotron.min.js"></script>
+        <script src="assets/js/jquery.scrolly.min.js"></script>
+        <script src="assets/js/jquery.scrollex.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>

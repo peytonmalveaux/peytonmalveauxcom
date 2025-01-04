@@ -1,0 +1,138 @@
+<!DOCTYPE HTML>
+<!--
+    Robotic Navigation System - Detailed Page
+    Based on Twenty by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+    <head>
+        <title>Robotic Navigation System</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    </head>
+    <body class="is-preload">
+        <div id="page-wrapper">
+
+            <!-- Header -->
+            <header id="header">
+                <h1 id="logo"><a href="index.html">Peyton Malveaux <span>Robotic Navigation</span></a></h1>
+                <nav id="nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <!-- Main -->
+            <article id="main">
+                <header class="special container">
+                    <h2>Robotic Navigation System</h2>
+                    <p>An autonomous robot utilizing color detection and obstacle avoidance for navigation.</p>
+                </header>
+
+                <!-- Project Overview -->
+                <section class="wrapper style2 container">
+                    <div class="row gtr-50">
+                        <div class="col-12">
+                            <h3>Project Overview</h3>
+                            <p>This project focuses on building a robotic navigation system that autonomously moves towards target colors while avoiding obstacles in its path. The robot uses an EV3 color sensor for target detection and an ultrasonic sensor for obstacle avoidance. The core logic is implemented in Python, with serial communication to an Arduino for motor control and sensor data exchange.</p>
+                        </div>
+                    </div>
+
+                    <!-- Key Features -->
+                    <div class="row gtr-50">
+                        <div class="col-12">
+                            <h3>Key Features</h3>
+                            <p>The robotic system integrates multiple features to ensure smooth and efficient navigation:</p>
+                            <ul>
+                                <li><strong>Color Detection:</strong> The EV3 color sensor identifies specific target colors using a majority-vote algorithm for reliability.</li>
+                                <li><strong>Obstacle Avoidance:</strong> An ultrasonic sensor detects obstacles and triggers pre-defined evasive maneuvers.</li>
+                                <li><strong>Serial Communication:</strong> A custom protocol manages real-time motor control and sensor data exchange between Python scripts and the Arduino.</li>
+                                <li><strong>Motor Control:</strong> Precise commands control the robot's movement, including forward, backward, left, and right directions.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Steps and Implementation -->
+                    <div class="row gtr-50">
+                        <div class="col-12">
+                            <h3>Steps and Implementation</h3>
+                            <p>The following steps were taken to complete the robotic navigation system:</p>
+                            <ol>
+                                <li><strong>Setup:</strong> Configured hardware components, including sensors, motors, and the Arduino microcontroller.</li>
+                                <li><strong>Color Detection Algorithm:</strong> Implemented a majority-vote algorithm to accurately identify target colors.</li>
+                                <li><strong>Obstacle Avoidance:</strong> Developed logic to detect obstacles and execute evasive maneuvers seamlessly.</li>
+                                <li><strong>Serial Communication:</strong> Established a custom communication protocol between Python and Arduino to manage motor control and sensor readings.</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <!-- Code Snippet -->
+                    <div class="row gtr-50">
+                        <div class="col-12">
+                            <h4>Example Code Snippet (Python - Serial Communication)</h4>
+                            <pre><code>
+def initSerialConn(baudrate):
+    controller = SerialCommunicationController(baudrate)
+    return controller
+
+class SerialCommunicationController:
+    def moveForward(self, power):
+        serial_cmd = f"driveMotor {power} forward\\n"
+        self.serial.write(serial_cmd.encode())
+                            </code></pre>
+                            <p>This snippet shows the initialization of the serial communication with the Arduino and a sample motor control command to move the robot forward.</p>
+                        </div>
+                    </div>
+
+                    <!-- Performance Observations -->
+                    <div class="row gtr-50">
+                        <div class="col-12">
+                            <h3>Performance Observations</h3>
+                            <p>The robot successfully navigated various paths, accurately detecting target colors and avoiding obstacles. The project demonstrated the effectiveness of integrating multiple sensors and utilizing serial communication for real-time control.</p>
+                            <p><strong>Challenges:</strong> The main challenges involved ensuring smooth transitions between color detection and obstacle avoidance, as well as optimizing the communication protocol to reduce latency.</p>
+                        </div>
+                    </div>
+
+                    <!-- Screenshots -->
+                    <div class="row gtr-50">
+                        <div class="col-12">
+                            <h3>Video Demonstration</h3>
+                            <p>Below is a spot to embed a video demonstrating the robot in action:</p>
+                            <!-- Embed YouTube Video Here -->
+                            <div id="video-embed">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/3dEDkOCeRKc" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                </section>
+            </article>
+
+            <!-- Footer -->
+            <footer id="footer">
+                <ul class="icons">
+                    <li><a href="https://www.linkedin.com/in/peyton-malveaux-778472198/" class="icon brands circle fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                </ul>
+                <ul class="copyright">
+                    <li>&copy; Peyton Malveaux</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                </ul>
+            </footer>
+        </div>
+
+        <!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.dropotron.min.js"></script>
+        <script src="assets/js/jquery.scrolly.min.js"></script>
+        <script src="assets/js/jquery.scrollex.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
