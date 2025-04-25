@@ -1,0 +1,103 @@
+{
+    "unit_info": {
+      "unit_number": "****",
+      "provisioned": false
+    },
+    "devices": {
+      "UN****INDWAP01": {
+        "ip_addr": "10.***.***.11",
+        "serial": "************"
+      },
+      "UN****INDWAP02": {
+        "ip_addr": "10.***.***.12",
+        "serial": "************"
+      },
+      "UN****OUTWAP03": {
+        "ip_addr": "10.***.***.13",
+        "serial": "************"
+      },
+      "UN****OUTWAP04": {
+        "ip_addr": "10.***.***.14",
+        "serial": "************"
+      },
+      "UN****OUTWAP05": {
+        "ip_addr": "10.***.***.15",
+        "serial": "************"
+      },
+      "UN****OUTWAP06": {
+        "ip_addr": "10.***.***.16",
+        "serial": "************"
+      },
+      "UN****OUTWAP07": {
+        "ip_addr": "10.***.***.17",
+        "serial": "************"
+      },
+      "UN****OUTWAP08": {
+        "ip_addr": "10.***.***.18",
+        "serial": "************"
+      },
+      "UN****LANSWI01": {
+        "ip_addr": "10.***.***.220",
+        "serial": "************"
+      },
+      "UN****LANSWI02": {
+        "ip_addr": "10.***.***.221",
+        "serial": "************"
+      },
+      "UN****LANSWI03": {
+        "ip_addr": "10.***.***.222",
+        "serial": "************"
+      },
+      "UN****LANSWI04": {
+        "ip_addr": "10.***.***.223",
+        "serial": "************"
+      },
+      "UN****LTEMDM01": {
+        "ip_addr": "TBD",
+        "serial": "************"
+      },
+      "UN****WANRTR01": {
+        "ip_addr": "TBD",
+        "serial": "************"
+      }
+    },
+    "network_info": {
+      "name": "UNIT ****",
+      "unit_ipam": "****",
+      "UNSECURED_NETWORK": "10.***.***.0/24",
+      "unsecured_gateway": "10.***.***.254",
+      "SECURED_NETWORK": "10.***.***.0/24",
+      "secured_gateway": "10.***.***.254",
+      "NET_MGMT_NETWORK": "10.***.***.0/24",
+      "netmgmt_gateway": "10.***.***.1",
+      "KITCHEN_NETWORK": "10.***.***.0/24",
+      "kitchen_gateway": "",
+      "loopback_ipam": "UN****WANRTR01",
+      "organization_id": "*******",
+      "product_types": [
+        "appliance",
+        "switch",
+        "wireless",
+        "cellularGateway"
+      ],
+      "config_template": "************",
+      "unit_address": "************",
+      "network_id": ""
+    },
+    "cellular_info": {
+      "imei": "***************",
+      "sim_slot_1": {
+        "carrier": "T-Mo",
+        "sim": "********************"
+      },
+      "sim_slot_2": {
+        "carrier": "Verizon",
+        "sim": "********************"
+      }
+    },
+    "address": {
+      "address": "************"
+    },
+    "generated_at": "**********"
+  }
+  
