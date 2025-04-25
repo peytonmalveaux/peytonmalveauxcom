@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Network Configuration Automation</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    </head>
+    <body class="is-preload">
+        <div id="page-wrapper">
+
+            <!-- Header -->
+            <header id="header">
+                <h1 id="logo"><a href="index.html">Peyton Malveaux <span>Network Automation</span></a></h1>
+                <nav id="nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="docs/Peyton Malveaux - CHK.pdf">Resume</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <!-- Main -->
+            <article id="main">
+                <header class="special container">
+                    <h2>Network Configuration Automation</h2>
+                    <p>Automated end-to-end Meraki network provisioning using Python, IPAM, and Monday.com integration.</p>
+                </header>
+
+                <section class="wrapper style2 container">
+                    <!-- Overview -->
+                    <div class="row gtr-50">
+                        <div class="col-12">
+                            <h3>Project Overview</h3>
+                            <p>This project automates network configuration for new restaurant units. </br>
+                                Before the script runs we extract emails containing DOCX files with Hardware Checklist 
+                                via a Power Automate Workflow. Power Automates moves these docs to a SharePoint Site where we download the files from.
+                                While files are located, the script converts them to .TXT and then turns the checklist into a workable JSON file and uploads to GitEA.
+                                Once the raw JSON is uploaded it pulls data from Gitea, IPAM, and Monday.com, generates full network configuration files, and uploads a finalized JSONs back to Gitea for Meraki provisioning via Rundeck.</p>
+                            <ul>
+                                <li>Parses hardware checklists to build structured device configs.</li>
+                                <li>Queries IPAM for VLAN subnets and generates static IPs per device.</li>
+                                <li>Builds full JSON configuration including Meraki-specific fields for VLAN setup.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Workflow Breakdown -->
+                    <div class="row gtr-50">
+                        <div class="col-12">
+                            <h3>Automation Workflow</h3>
+                            <ol>
+                                <li><strong>Hardware Checklist Parsing:</strong> Reads JSON files from Gitea to extract routers, switches, access points, and MG info.</li>
+                                <li><strong>IPAM Subnet Lookup:</strong> Pulls secured, unsecured, net-mgmt, and kitchen VLANs by parsing comment tags.</li>
+                                <li><strong>Static IP Generation:</strong> Applies deterministic IP patterns (e.g., .254 for gateways, .11–.19 for APs, .220+ for switches).</li>
+                                <li><strong>Meraki Fields Injection:</strong> Adds VLAN ID mappings, gateway IPs, umbrella subnets, and template IDs to the final JSON.</li>
+                                <li><strong>Upload:</strong> Pushes JSON config files to a Git repository to trigger Rundeck for downstream provisioning.</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <!-- Screenshot Gallery -->
+                    <div class="row gtr-50">
+                        <div class="col-12">
+                            <h3>Screenshots and Sample Files</h3>
+                            <p>Visual examples of data extraction, JSON generation, and Meraki dashboard automation, and GitEA page</p>
+                            <div class="row">
+                                <div class="col-4 col-12-mobile">
+                                    <a href="images/powerauto.png" class="image featured">
+                                        <img src="images/powerauto.png" alt="Power Automate Flow" />
+                                    </a>
+                                    <p>Power Automate Flow to Pull Checklist Emails</p>
+                                </div>
+                                <div class="col-4 col-12-mobile">
+                                    <a href="images/sharepoint.jpg" class="image featured">
+                                        <img src="images/sharepoint.jpg" alt="Files Uploaded to SharePoint" />
+                                    </a>
+                                    <p>Files Uploaded to SharePoint Site via Power Automate</p>
+                                </div>
+                                <div class="col-4 col-12-mobile">
+                                    <a href="docs/meraki_config_sample.json" target="_blank">
+                                        View Final Meraki JSON Config
+                                    </a>
+                                    <p>SAMPLE: Meraki JSON Config File (JSON) (REDACTED)</p>
+                                </div>
+                                <div class="col-4 col-12-mobile">
+                                    <a href="images/GitEA.jpg" class="image featured">
+                                        <img src="images/GitEA.jpg" alt="GIT EA" />
+                                    </a>
+                                    <p>GIT EA</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </article>
+
+            <!-- Footer -->
+            <footer id="footer">
+                <ul class="icons">
+                    <li><a href="#" class="icon brands circle fa-twitter"><span class="label">Twitter</span></a></li>
+                    <li><a href="#" class="icon brands circle fa-facebook-f"><span class="label">Facebook</span></a></li>
+                    <li><a href="#" class="icon brands circle fa-github"><span class="label">GitHub</span></a></li>
+                </ul>
+                <ul class="copyright">
+                    <li>&copy; Peyton Malveaux</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                </ul>
+            </footer>
+
+        </div>
+
+        <!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.dropotron.min.js"></script>
+        <script src="assets/js/jquery.scrolly.min.js"></script>
+        <script src="assets/js/jquery.scrollex.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
